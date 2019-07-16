@@ -1,29 +1,59 @@
+/* margin-top
+margin-right
+margin-bottom
+margin-left */
+
 body{
   font-family: 'Open Sans', sans-serif;
   background-color:#FFF;
   overflow-x:hidden;
   margin: 0;
-  
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 h1 {
   margin: 0;
 }
-.navbar{
-  background-color:#FFF;
-  /* border-bottom: 1px solid #000; */
-  overflow:hidden;
+h2 {
+  padding: 0;
+  margin: 0;
+}
+/* Navigation */
+
+.navbar {
+  background-color: #FFF;
+  overflow: hidden;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.18);
-  height: 13.1%;
-}
-
-.linear-gradient {
-  background: linear-gradient(to right, #704C8F, #4A7A89, #3C7268, #D49F29);
-  /* padding: 1rem; */
+  height: 105px;
   width: 100%;
-  height: 0.6%;
-  padding: 3px;
 }
-
+div.purple {
+  width: 27.1%;
+  height: 5px;
+  background-color: #704C8F;
+  float: left;
+}
+div.blue {
+  width: 27.3%;
+  height: 5px;
+  background-color: #4A7A89;
+  margin-left: -4%;
+  float: left;
+}
+div.green {
+  width: 27.3%;
+  height: 5px;
+  background-color: #3C7268;
+  float: left;
+}
+div.yellow {
+  width: 27.1%;
+  height: 5px;
+  background-color: #D49F29;
+  margin-left: 73%;
+}
 .navbar a{
   float: right;
   display: block;
@@ -39,6 +69,9 @@ h1 {
 }
 .branding {
   float: left;
+  list-style:none;
+  margin-top: 14px;
+  margin-left: 40px;
 }
 .hide-on-lg {
   margin-left: 10px;
@@ -47,46 +80,179 @@ h1 {
 .btn-primary {
   background-color: #2c1246;
   border: none;
-  border-radius: 4px;
+  border-radius: 3px;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   margin: 4px 5px;
-  cursor: pointer;  
+  cursor: pointer;
+  width: 91px;
+  height: 49px;
+  font-weight: 700;
 }
+button.btn-request-info {
+  width: 141px;
+  margin-right: 25px;
+}
+/* Nav.Page-nav */
 
-.btn-apply {
-  margin-right: 20px;
+nav.page-nav {
+  background-color: #2c1246;
+  width: 100%;
+  height: 36px;
+  text-align: center;
+  padding-top: 10px;
 }
+nav.page-nav ul {
+  list-style:none;
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+nav.page-nav li {
+  display: inline;
+}
+nav.page-nav a {
+  color: #FFF;
+  text-decoration: none;
+  padding: 0px 0px 5px 0px;
+  margin: 0px 20px 0px 27px;
+  cursor: pointer;
+}
+/* nav.page-nav a:hover {
+  border-bottom: 5px solid #D49F29;
+} */
+a.current {
+  border-bottom: 5px solid #D49F29;
+}
+/*  Main#Main  */
 
-.btn-side-menu {
-  margin: 12px;
+
+main#main {
+  min-height: 900px;
+  background-image: url('../img/palmer-school.jpg');
+  background-size: cover;
+  background-position: right;
 }
+div.modal {
+  /* display: none; */
+  /* position: fixed; */
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+div.modal-content {
+  background-color: #FFF;
+  /* margin: 20% auto; */
+  width: 87%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 2s;
+  margin: 35px 0px 352px 91px;
+}
+@keyframes modalopen {
+  from {opacity: 0}
+  to {opacity: 1}  
+} 
+div.modal-header {
+  background-color: #2c1246;
+  padding: 15px;
+  color: #FFF;
+  font-family: 'EB Garamond', serif;
+}
+span.close-btn-modal {
+  color: #FFF;
+  font-size: 30px;
+}
+span.close-btn-modal:hover,span.close-btn-modal:focus{
+  color: #704C8F;
+  text-decoration: none;
+  cursor: pointer;
+}
+div.modal-body {
+  /* padding: 10px 20px; */
+  display: flex;
+}
+div.modal-video {
+  flex: 2;
+}
+div.modal-text {
+  flex: 1;
+  position: relative;
+}
+div.modal-video video {
+  width: 100%;
+  height: 100%;
+}
+div.modal-body h1 {
+  font-family: 'EB Garamond', serif;
+  color: #2c1246;
+  margin: 10px 0px 0px 10px;
+  padding: 10px 0px 0px 10px;
+}
+div.modal-body span {
+  color: #2c1246;
+  font-style: italic;
+  padding: 10px 0px 10px 10px;
+  margin: 10px 0px 0px 10px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+div.modal-text p {
+  color: #8c8c8c;
+  padding: 10px 10px 10px 10px;
+  margin: 0px 10px 10px 10px;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+div.modal-footer {
+  background-color: #f2f2f2;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 82px;
+  /* position: absolute;
+  bottom: 0; */
+}
+div.modal-footer ul {
+  list-style:none;
+}
+div.modal-footer li {
+  display: inline;
+  color: #595959;
+  margin: 10px;
+  cursor: pointer;
+}
+/* img.add-to-playlist-icon {
+  width: 50%;
+} */
+
+
 a.playlist-link {
   font-family: 'Open Sans', sans-serif;
   color: rgba(24, 24, 24, 0.5);
   font-size: 14px;
   font-weight: 700;
+  width: 51px;
+  height: 15px;
+  line-height: 23px;
 }
-
 img.forma-img {
-  background-color: #bababa;
+  margin-right: -24px;
+  margin-top: 10px;
 }
-
-.navbar ul{
-  margin:8px 0 0 0;
-  list-style:none;
+li.nav-item {
+  margin: 24px 0px 0px 0px;
+  list-style: none;
 }
-
-/* .navbar a:hover{
-  background-color:#ddd;
-  color:#000;
-} */
-
 /* SIDE NAVIGATION */
+
 
 .side-nav{
   height:100%;
@@ -101,19 +267,17 @@ img.forma-img {
   padding-top:100px;
   transition:0.5s;
 }
-
 .side-nav a{
   padding:10px 10px 10px 30px;
   text-decoration:none;
   font-size:22px;
-  /* color:#ccc; */
   display:block;
   transition:0.3s;
 }
 
-/* .side-nav a:hover{
-  color:#fff;
-} */
+.btn-side-menu {
+  margin: 12px;
+}
 
 .side-nav .btn-close{
   position:absolute;
@@ -129,58 +293,12 @@ img.forma-img {
   height: 100%;
 }
 
-#main{
-  height: 857px;
-  flex-grow: 1;
-  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 62%), url(../img/new_img.jpg)no-repeat;
-  background-size: 150%;
-  background-position: 50% 50%;
-  transition: margin-left 0.5s;
-}
-
 .container {
   width:80%;
   margin:auto;
   overflow:hidden;
 }
-
-.text {
-  margin-top: 57vh;
-}
-
-#main h1 {
-  font-size: 74px;
-  line-height: 72px;
-  /* margin-bottom: 0; */
-  color: #FFF;
-  font-family: 'EB Garamond', serif;
-}
-
-#main span {
-  font-weight: 700;
-  color: #FFF;
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.btn-info {
-  background-color: #4a7a89;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  font-weight: 700;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 5px;
-  cursor: pointer;  
-}
-
-/* FOOTER */
-
-footer {
+/* FOOTER */ footer {
   height: 6%;
   background-color: #2c1246;
   position: fixed;
@@ -204,10 +322,10 @@ footer span {
   float: right;
   display: block;
   color: #FFF;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 26px;
-  margin-right: 16px;
+  margin-right: 50px;
   position: relative;
   left: 0;
   bottom: 0px;
@@ -222,8 +340,7 @@ footer i.fas.fa-share-alt {
   position: relative;
   top: 16px;
   bottom: 0;
-  right: 0;
-  left: 0;
+  left: -142px;
   cursor: pointer;
 }
 footer img {
@@ -232,101 +349,244 @@ footer img {
   top: 13px;
   bottom: 0;
   right: 0;
-  left: 0;
-  margin-right: 30px;
+  left: 50px;
 }
+/*  MEDIA  */
 
-/* MEDIA */
+@media(min-width: 1024px){div.modal-footer {font-size: 0.7rem;}}
 
-/* 768 MAX */
+/*  Min 1540  */@media(min-width: 1540px){
+  div.mobile-modal-footer {display: none;}
+
+  main#main {
+    height: 88vh;
+    background-image: url(../img/palmer-school.jpg);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: right;
+  }
+  /*  Modal Footer  */div.modal-footer {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 500px;
+  }
+}
 
 @media(max-width: 768px){
-  #main {
-    height: 640px;
-    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 62%), url(../img/new_img.jpg)no-repeat;
-    background-size: 150%;
-    background-position: 50% 50%;
-    transition: margin-left 0.5s;
+  /* Model */ div.modal-content {
+    background-color: #FFF;
+    width: 87%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 2s;
+    margin: 35px 0px 354px 50px;
   }
-  .text {
-    margin-top: 48vh;
+  div.modal-body video {
+    width: 100%;
+  }
+  div.modal-body {
+    display: block;
+  }
+  div.modal-footer li { cursor: pointer;}
+  
+  main#main {
+    min-height: 909px;
+    background-image: url(../img/palmer-school.jpg);
+    background-size: cover;
+    background-position: right;
   }
 }
 
+@media(min-width: 768px){
+  video.video-mobile {display:none}
+  div.mobile-text {display:none}
+  div.mobile-modal-footer { display: none;}
+}
 /* max 568px */
+
+
 @media ( max-width: 568px ) {
-  #main {
-    height: 97vh;
-    background: url(../img/new_img.jpg)no-repeat;
-    background-size: 150%;
-    background-position: 50% 50%;
-    transition: margin-left 0.5s;
-  }
-  #main span {
-    font-weight: 700;
-    color: #000;
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-
-  }
-  .text {
-    margin-top: 20px;
-    text-align: center;
-  }
-  #main h1 {
-    font-size: 31px;
-    line-height: 72px;
-    color: #000;
-  }
   .navbar-nav{display:none}
-  footer p {
-    font-size: 7px;
-    position: relative;
-    top: 3px;
-  }
-  footer img {
-    margin-right: 7px;
-  }  
+  
+  div.modal { display: none!important}
+  main#main {display: none}
 
+  video.video-mobile {
+    /* border: 2px solid #000; */
+    width: 100%;
+  }
+  /*MOBILE TEXT*/ div.mobile-text {
+    margin: 20px; 
+  }
+  div.mobile-text h1 {
+    font-family: 'EB Garamond', serif;
+    color: #2c1246;
+  }
+  div.mobile-text span {
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: #2c1246; 
+  }
+  div.mobile-text p { 
+    color: #808080;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 0px 10px;
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+  /*MODAL FOOTER*/
+  div.modal-footer li {
+    font-size: 0.7rem;
+    cursor: pointer;
+  }
+  /*  FOOTER  */ footer {
+    position: static;
+    height: 237px;
+  }
+  footer i.fas.fa-share-alt {
+    font-size: 0.8rem;
+    float: none;
+    margin-right: 0;
+    position: relative;
+    left: 0px;
+    top: 93px;
+    left: 311px;
+  }
+  footer span {
+    float: none;
+    margin-right: 0;
+    text-align: center;
+    position: relative;
+    top: 70px;
+  }
+  footer p {
+    float: none;
+    text-align: center;
+    position: relative;
+    top: 114px;
+  }
+  footer img.student-bridge {
+    float: none;
+    position: relative;
+    text-align: center;
+    left: 215px;
+    top: 140px;
+  }
 }
+  
 
 @media(min-width:568px){
   .open-slide{display:none}
   .hide-on-lg {display:none}
 }
+/*  425 max  */
 
-/* 425 max */
 
 @media(max-width: 425px) {
-  #main {
-    height: 113vh;
-    background: url(../img/new_img.jpg)no-repeat;
-    background-size: 150%;
-    background-position: 50% 50%;
-    transition: margin-left 0.5s;
+  nav.page-nav ul {
+    font-size: 15px;
+  }
+  div.modal-body {
+    color: #000;
+  }
+  /*  FOOTER  */ footer i.fas.fa-share-alt {
+    font-size: 0.8rem;
+    float: none;
+    margin-right: 0;
+    position: relative;
+    left: 0px;
+    top: 102px;
+    left: 239px;
+}
+  footer span {
+    float: none;
+    margin-right: 0;
+    position: relative;
+    top: 80px;
+    left: 0px;
+  }
+  footer p {
+    float: none;
+    text-align: center;
+    position: relative;
+    top: 109px;
+  }
+  footer img.student-bridge {
+    float: none;
+    position: relative;
+    text-align: center;
+    left: 147px;
+    top: 140px;
   }
 }
+/*  375 max  */
 
-/* 375 max */
+
 @media(max-width: 375px) {
-  #main {
-    height: 119vh;
-    background: url(../img/new_img.jpg)no-repeat;
-    background-size: 150%;
-    background-position: 50% 50%;
-    transition: margin-left 0.5s;
-  }
-  footer i.fas.fa-share-alt {
-    margin-right: 13px;
+  /*  FOOTER  */footer i.fas.fa-share-alt {
+    font-size: 0.8rem;
+    float: none;
+    margin-right: 0;
+    position: relative;
+    left: 0px;
+    top: 70px;
+    left: 214px;
   }
   footer span {
-    font-size: 8px;
-    margin-right: 8px;
+    float: none;
+    margin-right: 0;
+    text-align: center;
+    position: relative;
+    top: 47px;
+  }
+  
+  footer img.student-bridge {
+    float: none;
+    position: relative;
+    text-align: center;
+    left: 119px;
+    top: 100px;
+  }
+  footer p {
+    float: none;
+    text-align: center;
+    position: relative;
+    top: 70px;
+  }
+} 
+/* 320 max */
+
+
+@media(max-width: 320px) {
+  nav.page-nav ul {font-size: 0.7rem}
+
+  /*  FOOTER  */footer i.fas.fa-share-alt {
+    font-size: 0.8rem;
+    float: none;
+    margin-right: 0;
+    position: relative;
+    left: 0px;
+    top: 101px;
+    left: 188px;
+  }
+  footer img.student-bridge {
+    float: none;
+    position: relative;
+    text-align: center;
+    left: 90px;
+    top: 142px;
+  }
+  footer span {
+    float: none;
+    margin-right: 0;
+    text-align: center;
+    position: relative;
+    top: 78px;
+  }
+  footer p {
+    float: none;
+    position: relative;
+    top: 130px;
   }
 }
-
-/* 320px max */
-@media(max-width: 320px) {
-}
-
-
